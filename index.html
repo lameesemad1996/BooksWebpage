@@ -7,6 +7,19 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel=”stylesheet” href=”font-awesome/css/font-awesome.css”>
         <title>BookWorld</title>
+        <script>
+            function myFunction()
+            {
+                var x = document.getElementById("title").value;
+                document.getElementById("booktitle").innerHTML = "<h1>"+x+"</h1>";
+                var y = document.getElementById("subtitle").value;
+                document.getElementById("booksubtitle").innerHTML = "<h3>"+y+"</h3>";
+                var w = document.getElementById("publisher").value;
+                document.getElementById("publishername").innerHTML = "<h3>"+w+"</h3>";
+                var z = document.getElementById("author").value;
+                document.getElementById("authorname").innerHTML = "<h3>"+z+"</h3>";
+            }
+            </script>
     </head>
     <body>
         <section id="cover">
@@ -18,24 +31,24 @@
 
                         <!--first column starts here-->
                         <div class="col-sm-6 com-sm-offset-1">
-                            <form action="">
+                            <form>
                                 <div class="form-group">
-                                    <label id="title"><h3>Book Title</h3></label>
-                                    <input type="text" class="form-control form-control-lg" placeholder="A Thousand Pieces of You">
+                                    <label><h3>Book Title</h3></label>
+                                    <input id="title" type="text" class="form-control form-control-lg" placeholder="A Thousand Pieces of You">
                                 </div>      
                                 <div class="form-group">
-                                        <label id="subtitle"><h3>Book Subtitle</h3></label>
-                                        <input type="text" class="form-control form-control-lg" placeholder="A Thousand Pieces of You">
+                                        <label><h3>Book Subtitle</h3></label>
+                                        <input id="subtitle" type="text" class="form-control form-control-lg" placeholder="A Thousand Pieces of You">
                                 </div>
                                 <div class="form-group">
-                                        <label id="author"><h3>Author Name</h3></label>
-                                        <input type="text" class="form-control form-control-lg" placeholder="Claudia Gray">
+                                        <label><h3>Author Name</h3></label>
+                                        <input id="author" type="text" class="form-control form-control-lg" placeholder="Claudia Gray">
                                 </div>
                                 <div class="form-group">
-                                        <label id="publisher"><h3>Publisher</h3></label>
-                                        <input type="text" class="form-control form-control-lg" placeholder="Harper Teen">
+                                        <label><h3>Publisher</h3></label>
+                                        <input id="publisher" type="text" class="form-control form-control-lg" placeholder="Harper Teen">
                                 </div>
-                                <button id="myButton" type="submit" class="btn btn-dark btn-lg" onclick="myFunction()">Generate</button>
+                                <button id="myButton" type="button" class="btn btn-dark btn-lg" onclick="myFunction()">Generate</button>
                             </form>
                         </div>
                         <!--first column ends here-->
@@ -44,13 +57,13 @@
                         <div class="col-sm-6 com-sm-offset-1">
                             <label id="label" class= "text-center"><h3>Book Cover</h3></label>
                             <div class="row">
-                                <img id="bookcover" src="images/bookcover.png" class="mx-auto d-block" class="img-fluid" alt="Responsive image">
-                                <div class="text-block"> 
-                                    <div class="text-center" id="booktitle"><h1>A Thousand Pieces of You</h1></div>
+                               <div  id="bookcover"> <img src="images/bookcover.png" class="mx-auto d-block" class="img-fluid" alt="Responsive image"> </div>
+                                <div class="text-block" id="block"> 
+                                    <div class="text-center" id="booktitle"></div>
                                     <br>
-                                    <div class="text-center" id="booksubtitle"><h5>A Thousand Pieces of You</h5></div>
-                                    <div class="text-center" id="authorname"><h3>Claudia Gray</h3></div>
-                                    <div class="text-center" id="publishername"><h3>Harper Teen</h3></div>
+                                    <div class="text-center" id="booksubtitle"></div>
+                                    <div class="text-center" id="authorname"></div>
+                                    <div class="text-center" id="publishername"></div>
                                 </div>
                             </div>
                         </div>
@@ -61,22 +74,6 @@
             </div>
         </section>
         <!-- Optional JavaScript -->
-        <script>
-            $(document).ready(function()
-            {
-                function myFunction()
-                {
-                    var x = document.getElementById("title").value;
-                    document.getElementById("booktitle").innerHTML = x;
-                    var y = document.getElementById("subtitle").value;
-                    document.getElementById("booksubtitle").innerHTML = y;
-                    var w = document.getElementById("publisher").value;
-                    document.getElementById("publishername").innerHTML = w;
-                    var x = document.getElementById("author").value;
-                    document.getElementById("authorname").innerHTML = x;
-                }
-            });
-            </script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -24,24 +24,31 @@ body
     box-align: center;
 }
 
-.img-fluid {
+.img-fluid
+{
     max-width: 100%;
     height: 100%;
-  }
+}
 
 #bookcover
 {
     opacity: 0.9;
 }
 
-.text-block {
+.text-block 
+{
     position: absolute;
-    bottom: 250px;
-    right: 8%;
+    left: 30%;
+    top: 50%;
     background-color: rgba(153, 145, 145, 0);
     color: white;
     padding-left: 20px;
     padding-right: 20px;
     align-content: center;
-  }
+}
+
+#block
+{
+align-content: center;
+}
 
